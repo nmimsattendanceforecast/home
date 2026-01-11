@@ -1,0 +1,750 @@
+:root {
+    --bg-color: #050505;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent-blue: #2196F3;
+    --accent-green: #4CAF50;
+    --accent-red: #F44336;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --font-main: 'Outfit', sans-serif;
+    --card-radius: 20px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from animations */
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #fff 0%, #a5c9f5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Standard property */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(33, 150, 243, 0.2);
+}
+
+/* Glassmorphism Utilities */
+.glass-nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(5, 5, 5, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 1000;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--card-radius);
+    padding: 30px;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.btn-primary-sm {
+    background: var(--accent-blue);
+    color: #fff !important;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 5% 50px;
+    min-height: auto;
+    /* Allow content to dictate height */
+    position: relative;
+    overflow: visible;
+    /* changed from hidden to allow glow */
+}
+
+.hero-content {
+    flex: 0;
+    width: 100%;
+    max-width: 900px;
+    z-index: 2;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(33, 150, 243, 0.2);
+    color: var(--accent-blue);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.hero-sub {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--accent-blue);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.neon-glow {
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.4);
+}
+
+.neon-glow:hover {
+    box-shadow: 0 0 40px rgba(33, 150, 243, 0.6);
+    transform: scale(1.05);
+}
+
+.stats-preview {
+    display: none;
+    /* User requested removal in previous step, ensuring it's gone from CSS flow if present or relevant */
+}
+
+/* Hero Visual (Mockup) - S25 Ultra Style */
+.hero-visual {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+#weather-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    /* Behind everything including gradient-bg if needed, or -1 usually */
+    pointer-events: none;
+}
+
+.gradient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: radial-gradient(circle at 10% 20%, rgba(33, 150, 243, 0.08), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(100, 255, 218, 0.05), transparent 40%);
+}
+
+.glow-effect {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(33, 150, 243, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.phone-mockup {
+    width: 300px;
+    height: 620px;
+    border-radius: 30px;
+    /* Rounded corners as requested */
+    position: relative;
+    z-index: 2;
+    background: #000;
+    border: 3px solid #333;
+    /* Thinner bezel */
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.notch {
+    width: 12px;
+    height: 12px;
+    background: #111;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    /* Punch-hole camera */
+    z-index: 10;
+    border: 1px solid #222;
+}
+
+.screen-content {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Social Proof */
+.social-proof {
+    text-align: center;
+    padding: 50px 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    opacity: 0.6;
+}
+
+.uni-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Features */
+.features {
+    padding: 100px 5%;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 100px 5%;
+    background: linear-gradient(180deg, transparent 0%, rgba(33, 150, 243, 0.05) 100%);
+}
+
+.steps-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+    z-index: 2;
+    padding: 0 10px;
+}
+
+.step-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.4);
+}
+
+.step-line {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    flex: 1;
+    margin-top: 30px;
+}
+
+/* Visual Breakdown */
+:root {
+    --vb-gap: 200px;
+    --vb-width: 100%;
+    --vb-max-width: 1261px;
+    --vb-padding: 0px;
+    --img-x: 100px;
+    --img-y: 0px;
+    --img-scale: 1;
+}
+
+.visual-breakdown {
+    padding: 80px var(--vb-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Distribute space evenly */
+    gap: var(--vb-gap);
+    width: var(--vb-width);
+    max-width: var(--vb-max-width);
+    margin: 0 auto;
+    /* Ensure block centering */
+}
+
+.content-side {
+    flex: 1;
+}
+
+.check-list {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.check-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ddd;
+}
+
+.image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* Center the image within its half */
+}
+
+.ui-card-mock {
+    padding: 20px;
+}
+
+.ui-card-mock .row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.sub-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.danger {
+    color: var(--accent-red);
+}
+
+.warning {
+    color: orange;
+}
+
+/* Visual Breakdown Utilities */
+.visual-breakdown.reverse {
+    flex-direction: row-reverse;
+}
+
+.small-mock {
+    width: 260px;
+    height: 540px;
+    border-radius: 26px;
+    /* Rounded corners to match */
+    position: relative;
+    left: var(--img-x);
+    top: var(--img-y);
+    transform: scale(var(--img-scale));
+    /* Note: This might conflict with other transforms if applied directly, but small-mock usually doesn't have other transforms except hover on glass-card */
+}
+
+.small-mock .screen-content {
+    padding-top: 40px;
+    /* Safe area for notch */
+    background-color: #000;
+}
+
+.calendar-section .screen-image {
+    position: relative;
+    top: 4px;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 1px solid rgba(33, 150, 243, 0.2);
+}
+
+.cta-card h2 {
+    margin-bottom: 20px;
+}
+
+.cta-card button.large {
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+.small-note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 5% 20px;
+    background: #020202;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.developer-credit {
+    text-align: center;
+    color: #555;
+    /* Matching copyright color or slightly different */
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Pro Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: blur(10px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .glass-nav .nav-links {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+        align-items: center;
+        /* Ensure alignment */
+    }
+
+    .hero-content {
+        margin-bottom: 60px;
+        align-items: center;
+        /* Center children like buttons */
+    }
+
+    .hero-sub {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-group {
+        justify-content: center;
+        flex-direction: column;
+        /* Stack buttons on mobile helps centering */
+        width: 100%;
+        align-items: center;
+    }
+
+    .stats-preview {
+        justify-content: center;
+    }
+
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .step-line {
+        display: none;
+    }
+
+    /* Force strictly centered visual breakdown */
+    .visual-breakdown,
+    .visual-breakdown.reverse {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 40px;
+        width: 90% !important;
+        /* Override layout tuner for safety on mobile */
+    }
+
+    .content-side {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-side {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: -1;
+        /* Force image to top on mobile */
+        margin-bottom: 30px;
+        /* Add spacing between image and text */
+    }
+
+    .check-list {
+        display: inline-block;
+        /* Helps centering list items relative to block */
+        text-align: left;
+        /* Keep list item text readable, or center if preferred? User said 'everything' */
+        padding: 0;
+    }
+
+    .check-list li {
+        justify-content: flex-start;
+        /* Keep icon near text */
+    }
+
+    .small-mock {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        left: auto !important;
+        /* Reset layout tuner offsets for mobile */
+        top: auto !important;
+        transform: none !important;
+        /* Reset layout tuner scale */
+    }
+
+    .calendar-section .screen-image {
+        top: 4px;
+        /* Explicitly ensure this applies on mobile */
+    }
+}

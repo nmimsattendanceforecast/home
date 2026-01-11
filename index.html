@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMIMS Attendance Forecast | Master Your Attendance</title>
+    <meta name="description"
+        content="The smartest way for NMIMS students to track, predict, and manage attendance. Sync with SAP in seconds and forecast your freedom.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="weather-canvas"></canvas>
+    <!-- Background Gradient Bubbles -->
+    <div class="gradient-bg"></div>
+    <!-- Navbar -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="NMIMS Forecast Logo" class="logo-img"> NMIMS Attendance Forecast
+        </div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How it Works</a></li>
+            <li><a href="#download" class="btn-primary-sm">Get App</a></li>
+        </ul>
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">✨ Updated for 2026</div>
+            <h1 class="gradient-text">NMIMS Attendance Forecast</h1>
+            <p class="hero-sub">The smartest way for NMIMS students to track, predict, and manage attendance. Sync with
+                SAP in seconds and never worry about the attendance rule again.</p>
+            <div class="cta-group">
+                <a href="#download" class="btn-primary neon-glow">Download Now</a>
+                <a href="#features" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2">
+            <div class="phone-mockup glass-card">
+                <div class="notch"></div>
+                <div class="screen-content">
+                    <img src="assets/img/dashboard.jpg" alt="App Dashboard" class="screen-image" loading="eager">
+                </div>
+            </div>
+            <div class="glow-effect"></div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header reveal">
+            <h2>Why Students Love It</h2>
+            <p>More than just a tracker. It's your academically strategic advantage.</p>
+        </div>
+
+        <!-- Feature 1: Toggle -->
+        <div class="visual-breakdown reverse reveal">
+            <div class="image-side">
+                <div class="phone-mockup glass-card small-mock">
+                    <div class="notch"></div>
+                    <div class="screen-content">
+                        <img src="assets/img/upload_toggle.jpg" alt="Attendance Toggle" class="screen-image"
+                            loading="eager">
+                    </div>
+                </div>
+            </div>
+            <div class="content-side">
+                <h2>Flexible 75/80% Toggle</h2>
+                <p>Course requirements change? No problem. Instantly switch your target attendance between 75% and 80%
+                    to see how many classes you can really afford to miss.</p>
+                <ul class="check-list">
+                    <li>✅ One-tap switch</li>
+                    <li>✅ Real-time recalculations</li>
+                    <li>✅ Custom "Safe Zone" targets</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Feature 2: Attendance Calendar -->
+        <div class="visual-breakdown reveal calendar-section">
+            <div class="content-side">
+                <h2>Smart Attendance Calendar</h2>
+                <p>Track your daily attendance status with a quick glance. View detailed history for every subject mixed
+                    with weather insights.</p>
+                <ul class="check-list">
+                    <li>✅ Daily status overview</li>
+                    <li>✅ Subject-wise history</li>
+                    <li>✅ Integrated weather forecast</li>
+                </ul>
+            </div>
+            <div class="image-side">
+                <div class="phone-mockup glass-card small-mock">
+                    <div class="notch"></div>
+                    <div class="screen-content">
+                        <img src="assets/img/attendance_calendar.jpg" alt="Attendance Calendar" class="screen-image"
+                            loading="eager">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 3: Analytics -->
+        <div class="visual-breakdown reveal">
+            <div class="content-side">
+                <h2>Deep Analytics & Heatmaps</h2>
+                <p>Visualize your attendance trends with our Spider Graph and Calendar Heatmap. Identify patterns and
+                    plan your semester better.</p>
+                <ul class="check-list">
+                    <li>✅ Subject-wise comparison</li>
+                    <li>✅ Monthly heatmaps</li>
+                    <li>✅ Streak tracking</li>
+                </ul>
+            </div>
+            <div class="image-side">
+                <div class="phone-mockup glass-card small-mock">
+                    <div class="notch"></div>
+                    <div class="screen-content">
+                        <img src="assets/img/analytics.jpg" alt="Analytics" class="screen-image" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 3: Subject Detail -->
+        <div class="visual-breakdown reverse reveal">
+            <div class="image-side">
+                <div class="phone-mockup glass-card small-mock">
+                    <div class="notch"></div>
+                    <div class="screen-content">
+                        <img src="assets/img/subject_detail.jpg" alt="Subject Detail" class="screen-image"
+                            loading="eager">
+                    </div>
+                </div>
+            </div>
+            <div class="content-side">
+                <h2>Subject-Wise Forecast</h2>
+                <p>Drill down into every subject. See exactly how many classes you can afford to miss for
+                    <i>Microeconomics</i> before hitting the danger zone.
+                </p>
+                <ul class="check-list">
+                    <li>✅ Detailed per-subject stats</li>
+                    <li>✅ 'Bunk' or 'Attend' recommendations</li>
+                    <li>✅ Color-coded status alerts</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works reveal">
+        <div class="section-header">
+            <h2>How It Works</h2>
+        </div>
+        <div class="steps-container">
+            <div class="step reveal reveal-delay-1">
+                <div class="step-circle">1</div>
+                <h3>Login</h3>
+                <p>Use your SAP credentials securely.</p>
+            </div>
+            <div class="step-line reveal reveal-delay-1"></div>
+            <div class="step reveal reveal-delay-2">
+                <div class="step-circle">2</div>
+                <h3>Sync</h3>
+                <p>We fetch your latest report automatically.</p>
+            </div>
+            <div class="step-line reveal reveal-delay-2"></div>
+            <div class="step reveal reveal-delay-3">
+                <div class="step-circle">3</div>
+                <h3>Toggle</h3>
+                <p>Set 75% or 80% rule and check your forecast.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="download" class="cta-section">
+        <div class="cta-card glass-card">
+            <h2>Ready to Forecast Your Freedom?</h2>
+            <p>Join thousands of NMIMS students who are already managing their attendance the smart way.</p>
+            <button class="btn-primary neon-glow large">Download for Android</button>
+            <p class="small-note">iOS version coming soon</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>NMIMS Attendance Forecast</h4>
+                <p>Not affiliated with NMIMS University. Built for students, by students.</p>
+            </div>
+
+        </div>
+        <div class="copyright">
+            © 2026 NMIMS Attendance Forecast. All rights reserved.
+        </div>
+        <div class="developer-credit">
+            Designed and developed with ❤️ by Hemish Vora
+        </div>
+    </footer>
+
+    <script src="weather.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
