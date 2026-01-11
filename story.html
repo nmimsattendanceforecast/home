@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMIMS Forecast - Story V3</title>
+    <link rel="stylesheet" href="story.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="weather-canvas"></canvas>
+    <div class="noise-overlay"></div>
+
+    <main class="frame-layout">
+        <!-- Top Text -->
+        <h1 class="giant-text top slide-down">LAUNCHING</h1>
+
+        <!-- Center Visual -->
+        <div class="visual-center zoom-in">
+            <div class="glow-aura"></div>
+            <div class="phone-mockup">
+                <div class="notch"></div>
+                <img src="assets/img/dashboard.jpg" alt="App UI">
+            </div>
+            <!-- Floating Weather (Subtle) -->
+            <div class="weather-badge">
+                <span class="icon">☁️</span>
+                <span class="temp">24°</span>
+            </div>
+        </div>
+
+        <!-- Bottom Text -->
+        <h1 class="giant-text bottom slide-up">TOMORROW</h1>
+
+        <!-- Footer Info -->
+        <footer class="fade-in">
+            <div class="app-tag">
+                <img src="assets/img/logo.png" alt="Logo" class="mini-logo">
+                <span>NMIMS ATTENDANCE FORECAST</span>
+            </div>
+            <div class="date-pill">12.01.26</div>
+        </footer>
+    </main>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>
